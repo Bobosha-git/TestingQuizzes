@@ -18,7 +18,7 @@
         },
         {
             "num_q": 3,
-            "question": "Что выведет этот код?\n\ndef func(x=[]):\n\n    x.append(1)\n    return x\n\nnprint(func())\nprint(func())",
+            "question": "Что выведет этот код?\n\ndef func(x=[]):\n\n    x.append(1)\n    return x\nprint(func())\nprint(func())",
             "options": ["[1] [1]", "[1] [1, 1]", "[1] Ошибка выполнения", "Ошибка синтаксиса"],
             "answer": "[1] [1, 1]",
             "points": 4
