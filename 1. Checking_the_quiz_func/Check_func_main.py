@@ -22,6 +22,14 @@ def check_answer(questions, answers):
     return score    
 
 
+def check_results(score, results_in_json):
+    for range_str, results_text in results_in_json.items():
+        min_score, max_score = map(int, range_str.split("-"))
+        if min_score <= score <= max_score:
+            return results_text
+    return "Все пошло по одному месту"
+
+
 def check():
     quis_list = open_file_quiz()
     shuffle_ques_options(quis_list)
@@ -40,6 +48,8 @@ def check():
 
     score = check_answer(quis_list["questions"], user_ans)
     print(f"Ты набрал {score} очков")
+    results = check_results(score, quis_list["results"])
+    print(f"Твой результат: {results}")
 
 if __name__ == "__main__":
     check()
