@@ -31,8 +31,10 @@ def check():
 
     for question in quis_list["questions"]:
         print("\n" + question["question"])
+        print("")
         for x, option in enumerate(question["options"], start=1):
             print(f"{x}. {option}")
+        print("")
         answer = input("Твой ответ: ")
         user_ans.append(question["options"][int(answer) - 1])
 
