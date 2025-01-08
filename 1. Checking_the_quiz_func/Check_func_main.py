@@ -16,9 +16,10 @@ def shuffle_ques_options(correct_file):
 
 def check_answer(questions, answers):
     score = 0
-    for question, answer in zip(questions, answers):
-        if question["answer"] == answer:
-            score += question.get("points", 1)
+    for question, answer_index in zip(questions, answers):
+        selected_option = question["options"][answer_index]
+        if selected_option.get("is_right", False):
+            score += selected_option.get("points", {}).get("score",1)
     return score    
 
 
@@ -41,15 +42,16 @@ def check():
         print("\n" + question["question"])
         print("")
         for x, option in enumerate(question["options"], start=1):
-            print(f"{x}. {option}")
+            print(f"{x}. {option["text"]}")
         print("")
-        answer = input("Твой ответ: ")
-        user_ans.append(question["options"][int(answer) - 1])
+        answer = int(input("Твой ответ: "))
+        user_ans.append(answer - 1)
 
     score = check_answer(quis_list["questions"], user_ans)
-    print(f"Ты набрал {score} очков")
+    print(f"\nТы набрал {score} очков")
     results = check_results(score, quis_list["results"])
-    print(f"Твой результат: {results}")
+    print(f"\nТвой результат: {results}\n")
+
 
 if __name__ == "__main__":
     check()

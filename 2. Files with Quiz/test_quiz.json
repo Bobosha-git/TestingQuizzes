@@ -1,41 +1,51 @@
 {
-    "name": "Знания Питухона",
+    "name": "Знания Питончика",
     "description": "Простенькие вопросы по Питончику",
     "questions": [
         {
-            "num_q": 1,
             "question": "Какой тип данных возвращает функция len()?",
-            "options": ["str", "float", "int", "list"],
-            "answer": "int",
-            "points": 3
+            "options": [
+                {"text": "str"},
+                {"text": "float"},
+                {"text": "int","points":{"score":3}, "is_right": true, "is_full": true},
+                {"text": "list"}
+            ]
         },
         {
-            "num_q": 2,
             "question": "Какой результат выполнения следующего кода?\n\nprint(2 ** 3 ** 2)",
-            "options": ["64", "512", "8", "Ошибка выполнения"],
-            "answer": "512",
-            "points": 5
+            "options": [
+                {"text": "64"},
+                {"text": "512", "points":{"score":5}, "is_right": true, "is_full": true},
+                {"text": "8"},
+                {"text": "Ошибка выполнения"}
+            ]
         },
         {
-            "num_q": 3,
-            "question": "Что выведет этот код?\n\ndef func(x=[]):\n\n    x.append(1)\n    return x\nprint(func())\nprint(func())",
-            "options": ["[1] [1]", "[1] [1, 1]", "[1] Ошибка выполнения", "Ошибка синтаксиса"],
-            "answer": "[1] [1, 1]",
-            "points": 4
+            "question": "Что выведет этот код?\n\ndef func(x=[]):\n\n    x.append(1)\n    return x\n\nprint(func())\nprint(func())",
+            "options": [
+                {"text": "[1] [1]"},
+                {"text": "[1] [1, 1]", "points":{"score": 4}, "is_right": true, "is_full": true},
+                {"text": "[1] Ошибка выполнения"},
+                {"text": "Ошибка ситаксиса"}
+            ]
         },
         {
-            "num_q": 4,
             "question": "Как называется метод, используемый для добавления элемента в конец списка?",
-            "options": ["add()", "insert()", "append()", "extend()"],
-            "answer": "append()",
-            "points": 2
+            "options": [
+                {"text": "add()"},
+                {"text": "insert()"},
+                {"text": "append()", "points":{"score": 2}, "is_right": true, "is_full": true},
+                {"text": "extend()"}
+            ]
         },
         {
-            "num_q": 5,
             "question": "Какой из этих вариантов создаёт словарь?",
-            "options": ["d = {}", "d = []", "d = ()", "d = set()"],
-            "answer": "d = {}",
-            "points": 3
+            "options": [
+                {"text": "d = {}", "points":{"score": 3}, "is_right": true, "is_full": true},
+                {"text": "d = []"},
+                {"text": "d = ()"},
+                {"text": "d = set()"}
+            ]
         }
     ],
     "results": {
