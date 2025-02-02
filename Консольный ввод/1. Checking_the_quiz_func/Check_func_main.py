@@ -24,10 +24,10 @@ def check_answer(questions, answers):
 
 
 def check_results(score, results_in_json):
-    for range_str, results_text in results_in_json.items():
-        min_score, max_score = map(int, range_str.split("-"))
+    for variant in results_in_json:
+        min_score, max_score = variant["points"]
         if min_score <= score <= max_score:
-            return results_text
+            return variant["text"]
     return "Все пошло по одному месту"
 
 
@@ -50,7 +50,7 @@ def check():
     score = check_answer(quis_list["questions"], user_ans)
     print(f"\nТы набрал {score} очков")
     results = check_results(score, quis_list["results"])
-    print(f"\nТвой результат: {results}\n")
+    print(f"\n{results}\n")
 
 
 if __name__ == "__main__":

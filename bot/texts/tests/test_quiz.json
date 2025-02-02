@@ -1,0 +1,69 @@
+{
+    "name": "Знания Питончика",
+    "description": "Простенькие вопросы по Питончику",
+    "questions": [
+        {
+            "question": "Какой тип данных возвращает функция len()?",
+            "options": [
+                {"text": "str"},
+                {"text": "float"},
+                {"text": "int","points":{"score":3}, "is_right": true, "is_full": true},
+                {"text": "list"}
+            ]
+        },
+        {
+            "question": "Какой результат выполнения следующего кода?\n\nprint(2 ** 3 ** 2)",
+            "options": [
+                {"text": "64"},
+                {"text": "512", "points":{"score":5}, "is_right": true, "is_full": true},
+                {"text": "8"},
+                {"text": "Ошибка выполнения"}
+            ]
+        },
+        {
+            "question": "Что выведет этот код?\n\ndef func(x=[]):\n\n    x.append(1)\n    return x\n\nprint(func())\nprint(func())",
+            "options": [
+                {"text": "[1] [1]"},
+                {"text": "[1] [1, 1]", "points":{"score": 4}, "is_right": true, "is_full": true},
+                {"text": "[1] Ошибка выполнения"},
+                {"text": "Ошибка ситаксиса"}
+            ]
+        },
+        {
+            "question": "Как называется метод, используемый для добавления элемента в конец списка?",
+            "options": [
+                {"text": "add()"},
+                {"text": "insert()"},
+                {"text": "append()", "points":{"score": 2}, "is_right": true, "is_full": true},
+                {"text": "extend()"}
+            ]
+        },
+        {
+            "question": "Какой из этих вариантов создаёт словарь?",
+            "options": [
+                {"text": "d = {}", "points":{"score": 3}, "is_right": true, "is_full": true},
+                {"text": "d = []"},
+                {"text": "d = ()"},
+                {"text": "d = set()"}
+            ]
+        }
+    ],
+    "results": [
+            {
+                "points": [15,17],
+                "text": "Отличный результат! Вы прекрасно разбираетесь в Python"
+            },
+            {
+                "points": [10,14],
+                "text": "Хорошо, но есть ещё места для улучшения. Продолжайте учиться!"
+            },
+            {
+                "points": [5,9],
+                "text": "Неплохо, но стоит углубить свои знания. Попробуйте разобраться с теми моментами, которые не получились."
+            },
+            {
+                "points": [0,5],
+                "text": "Не переживайте! Каждый шаг — это опыт. Время углубиться в Python и вернуться за лучшим результатом!"
+            }
+        ]
+    }
